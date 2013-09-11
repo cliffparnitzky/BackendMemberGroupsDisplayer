@@ -31,6 +31,12 @@
 // add new label callback
 $GLOBALS['TL_DCA']['tl_member']['list']['label']['label_callback'] = array('tl_member_BackendMemberGroupsDisplayer', 'setLabel');
 
+if (version_compare(VERSION, '2.11', '>='))
+{ 
+	// add groups to fields list 
+	$GLOBALS['TL_DCA']['tl_member']['list']['label']['fields'][] = 'groups';
+}
+
 /**
  * Class tl_member_BackendMemberGroupsDisplayer
  *
@@ -48,10 +54,26 @@ class tl_member_BackendMemberGroupsDisplayer extends tl_member
 	 * @param string
 	 * @return string
 	 */
-	public function setLabel($row, $label)
+	public function setLabel($row, $label, DataContainer $dc=null, $args=array())
 	{
 		$this->import("BackendMemberGroupsDisplayer");
-		return parent::addIcon($row, $label) . $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']));
+		
+		if (version_compare(VERSION, '2.11', '>='))
+		{
+			$args = parent::addIcon($row, $label, $dc, $args);
+
+			$groupsColumnIndex = array_search('groups', $GLOBALS['TL_DCA']['tl_member']['list']['label']['fields']);
+			if ($groupsColumnIndex !== FALSE)
+			{
+				$args[$groupsColumnIndex] = $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']), false);
+			}
+
+			return $args;
+		}
+		else
+		{
+			return parent::addIcon($row, $label) . $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']));
+		}
 	}
 }
 

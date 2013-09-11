@@ -38,9 +38,9 @@ class BackendMemberGroupsDisplayer extends Backend {
 	/**
 	* Get member group names
 	*/
-	public function getMemberGroupNames($arrGroups)
+	public function getMemberGroupNames($arrGroups, $blnFormatOutput = true)
 	{
-		if (count($arrGroups) > 0) {
+		if (is_array($arrGroups) && count($arrGroups) > 0) {
 			$objGroupNames = $this->Database->prepare("SELECT DISTINCT name FROM tl_member_group WHERE id IN (" . implode(", ", $arrGroups) . ") ORDER BY name") 
                             ->execute();
 			$arrGroupNames = array();
@@ -49,7 +49,21 @@ class BackendMemberGroupsDisplayer extends Backend {
 			}
 			
 			if (count($arrGroupNames) > 0) {
-				return '<span style="color:#b3b3b3; padding-left:3px; font-size: 9px;">[' . implode(", ", $arrGroupNames) . ']</span>';
+				$returnString = '';
+				
+				if ($blnFormatOutput)
+				{
+					$returnString .= '<span style="color:#b3b3b3; padding-left:3px; font-size: 9px;">[';
+				}
+				
+				$returnString .= implode(", ", $arrGroupNames);
+				
+				if ($blnFormatOutput)
+				{
+					$returnString .= ']</span>';
+				}
+				
+				return $returnString;
 			}
 		}
 		
