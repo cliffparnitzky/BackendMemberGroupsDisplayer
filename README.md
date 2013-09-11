@@ -28,3 +28,10 @@ Dependency
 ----------
 
 - There are no dependencies to other extensions, that have to be installed.
+
+
+Screenshot
+----------
+
+![Show groups of members](https://raw.github.com/cliffparnitzky/BackendMemberGroupsDisplayer/master/screenshot_members.jpg)
+![Show groups of pages](https://raw.github.com/cliffparnitzky/BackendMemberGroupsDisplayer/master/tablelayout_pages.jpg)
