@@ -1,7 +1,7 @@
 Contao Extension: BackendMemberGroupsDisplayer 
 ==============================================
 
-Show member groups at members and pages in backend (to get a better overview of granted rights).
+Show member groups at articles, calendars, members, news archives and pages in backend (to get a better overview of granted rights).
 
 
 Installation
