@@ -31,6 +31,6 @@
 /**
  * Define name and tooltip for preferences (inactive modules)
  */
-$GLOBALS['TL_LANG']['MOD']['BackendMemberGroupsDisplayer'] = array('Show member groups', 'Show member groups at members and pages in backend.');
+$GLOBALS['TL_LANG']['MOD']['BackendMemberGroupsDisplayer'] = array('Show member groups', 'Show member groups at articles (Contao 3), calendars, members, news archives and pages in backend (to get a better overview of granted rights).');
 
 ?>
