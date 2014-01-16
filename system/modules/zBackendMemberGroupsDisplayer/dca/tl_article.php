@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Copyright (C) 2005-2014 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2013
+ * @copyright  Cliff Parnitzky 2013-2014
  * @author     Cliff Parnitzky
  * @package    BackendMemberGroupsDisplayer
  * @license    LGPL
@@ -36,7 +36,7 @@ $GLOBALS['TL_DCA']['tl_article']['list']['label']['label_callback'] = array('tl_
  *
  * Provide miscellaneous methods that are used by the data configuration array.
  * PHP version 5
- * @copyright  Cliff Parnitzky 2013
+ * @copyright  Cliff Parnitzky 2013-2014
  * @author     Cliff Parnitzky
  * @package    Controller
  */

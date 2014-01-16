@@ -2,7 +2,7 @@
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2012 Leo Feyer
+ * Copyright (C) 2005-2014 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,16 +21,15 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2013
+ * @copyright  Cliff Parnitzky 2013-2014
  * @author     Cliff Parnitzky
  * @package    BackendMemberGroupsDisplayer
  * @license    LGPL
- * @filesource
  */
 
 /**
  * Define name and tooltip for preferences (inactive modules)
  */
-$GLOBALS['TL_LANG']['MOD']['BackendMemberGroupsDisplayer'] = array('Zeigt Mitgliedergruppen', 'Zeigt Mitgliedergruppen an Artikeln (Contao 3), Events, Mitgliedern, Nachrichten und Seiten an (um eine bessere Übersicht über die vergebenen Rechte zu erhalten).');
+$GLOBALS['TL_LANG']['MOD']['zBackendMemberGroupsDisplayer'] = array('Zeigt Mitgliedergruppen', 'Zeigt Mitgliedergruppen an Mitgliedern und Seiten.');
 
 ?>
