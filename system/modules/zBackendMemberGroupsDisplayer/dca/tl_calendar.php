@@ -35,7 +35,7 @@ $GLOBALS['TL_DCA']['tl_calendar']['list']['label']['label_callback'] = array('tl
  *
  * Provide miscellaneous methods that are used by the data configuration array.
  * PHP version 5
- * @copyright  Cliff Parnitzky 2013
+ * @copyright  Cliff Parnitzky 2013-2014
  * @author     Cliff Parnitzky
  * @package    Controller
  */
