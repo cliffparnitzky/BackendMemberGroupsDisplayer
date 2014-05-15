@@ -50,7 +50,7 @@ class tl_calendar_BackendMemberGroupsDisplayer extends tl_calendar
 	public function setLabel($row, $label)
 	{
 		$this->import("BackendMemberGroupsDisplayer");
-		return $label . $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']));
+		return $label . ($row['protected'] ? $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups'])) : '');
 	}
 }
 

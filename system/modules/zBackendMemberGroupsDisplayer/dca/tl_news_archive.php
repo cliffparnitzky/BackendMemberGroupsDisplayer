@@ -50,7 +50,7 @@ class tl_news_archive_BackendMemberGroupsDisplayer extends tl_news_archive
 	public function setLabel($row, $label)
 	{
 		$this->import("BackendMemberGroupsDisplayer");
-		return $label . $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']));
+		return $label . ($row['protected'] ? $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups'])) : '');
 	}
 }
 

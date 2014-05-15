@@ -50,7 +50,7 @@ class tl_page_BackendMemberGroupsDisplayer extends tl_page
 	public function setLabel($row, $label)
 	{
 		$this->import("BackendMemberGroupsDisplayer");
-		return parent::addIcon($row, $label) . $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups']));
+		return parent::addIcon($row, $label) . ($row['protected'] ? $this->BackendMemberGroupsDisplayer->getMemberGroupNames(deserialize($row['groups'])) : '');
 	}
 }
 
