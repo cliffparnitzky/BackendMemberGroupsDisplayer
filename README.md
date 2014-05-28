@@ -8,7 +8,10 @@ Installation
 ------------
 
 The extension is not published in contao extension repository.
-Install it manually or via [composer](https://packagist.org/packages/cliffparnitzky/backend-member-groups-displayer).
+
+Install it via [composer](https://packagist.org/packages/cliffparnitzky/backend-member-groups-displayer).
+
+If you prefer to install it manually, download the latest release here: https://github.com/cliffparnitzky/BackendMemberGroupsDisplayer/releases
 
 
 Tracker
